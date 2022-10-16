@@ -10,6 +10,7 @@ function book(title, author, pages, read) {
 
 function addBookToLibrary() {
   // do stuff here
-  let newBook = new book()
-  myLibrary.push()
+  let newBook = new book("Harry Potter", "JK Rowling", 554, true)
+  myLibrary.push(newBook)
+  return;
 }
