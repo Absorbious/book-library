@@ -17,7 +17,7 @@ function addBookToLibrary() {
   let read = prompt("Have you read it? true / false");
   let newBook = new book(title, author, pages, read);
   myLibrary.push(newBook);
-  // addBookToDisplay();
+  addBookToDisplay();
   return;
 }
 
@@ -26,9 +26,10 @@ function addBookToDisplay() {
   const p2 = document.createElement("p");
   const p3 = document.createElement("p");
   const p4 = document.createElement("p");
+  p.appendChild(document.createTextNode('Title of book'));
 
-  p.innerText = newBook.title;
-  p2.innerText = newBook.author;
-  p3.innerText = newBook.pages;
-  p4.innerText = newBook.read;
+  p.innerHTML = myLibrary[0].title;
+  p2.innerHTML = myLibrary[0].author;
+  p3.innerHTML = myLibrary[0].pages;
+  p4.innerHTML = myLibrary[0].read;
 }
