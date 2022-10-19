@@ -1,5 +1,7 @@
 const body = document.querySelector("body");
+const button = document.querySelector(".newBook");
 let myLibrary = [];
+button.addEventListener('click', addBookToLibrary);
 
 function book(title, author, pages, read) {
   // the constructor...
