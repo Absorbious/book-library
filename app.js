@@ -24,14 +24,9 @@ function addBookToLibrary() {
 }
 
 function addBookToDisplay() {
-  const p = document.createElement("p");
-  const p2 = document.createElement("p");
-  const p3 = document.createElement("p");
-  const p4 = document.createElement("p");
-  p.appendChild(document.createTextNode('Title of book'));
-
-  p.innerHTML = myLibrary[0].title;
-  p2.innerHTML = myLibrary[0].author;
-  p3.innerHTML = myLibrary[0].pages;
-  p4.innerHTML = myLibrary[0].read;
+  for(let book of myLibrary){
+    let p = document.createElement("p");
+    body.appendChild(p);
+    p.innerHTML = book.title;
+  }
 }
