@@ -24,9 +24,9 @@ function addBookToLibrary() {
 }
 
 function addBookToDisplay() {
-  for(let book of myLibrary){
     let p = document.createElement("p");
     body.appendChild(p);
-    p.innerHTML = book.title;
+    let newAddedBook = myLibrary.slice(-1);
+    console.log(newAddedBook[0].title);
+    p.innerHTML = newAddedBook[0].title;
   }
-}
