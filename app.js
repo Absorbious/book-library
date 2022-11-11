@@ -13,13 +13,18 @@ function book(title, author, pages, read) {
 
 function addBookToLibrary() {
   // do stuff here
-  let title = prompt("What is the title?");
-  let author = prompt("Who is the author?");
-  let pages = parseInt(prompt("How many pages?"));
-  let read = prompt("Have you read it? true / false");
-  let newBook = new book(title, author, pages, read);
-  myLibrary.push(newBook);
-  addBookToDisplay();
+  let title = document.getElementById('title').value;
+  let author = document.getElementById('author').value;
+  let pages = document.getElementById('pages').value;
+  let read = document.getElementById('status').value;
+  if((title !== '')||(author !== '')||(pages !== '')){
+    let newBook = new book(title, author, pages, read);
+    myLibrary.push(newBook);
+    addBookToDisplay();
+  }else{
+    alert('You have to write something');
+  }
+  event.preventDefault();
   return;
 }
 

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Book Library</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Book Library</h1>
 
-    <button class="newBook">New Book</button>
+    <form class="newBookForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" /> <br />
+      <label for="author">Author:</label>
+      <input type="text" id="author" /> <br />
+      <label for="pages">Pages:</label>
+      <input type="number" id="pages" /> <br />
+      <label for="status">Status</label>
+      <input type="radio" id="status" name="library" value="read" />
+      <label for="status">Read</label>
+      <input type="radio" id="status" name="library" value="unread" />
+      <label for="status">Unread</label> <br />
+      <button class="newBook">New Book</button>
+    </form>
 
     <div class="library"></div>
-    
-</body>
-<script src="app.js" defer></script>
+  </body>
+  <script src="app.js" defer></script>
 </html>
