@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
 const button = document.querySelector(".newBook");
+const libraryDiv = document.querySelector(".library")
 let myLibrary = [];
 button.addEventListener('click', addBookToLibrary);
 
@@ -29,9 +30,14 @@ function addBookToLibrary() {
 }
 
 function addBookToDisplay() {
+    let div = document.createElement("div");
+    div.className = "bookCard"
+    body.appendChild(div)
     let p = document.createElement("p");
-    body.appendChild(p);
+    div.appendChild(p);
+    libraryDiv.appendChild(div);
     let newAddedBook = myLibrary.slice(-1);
     console.log(newAddedBook[0].title);
     p.innerHTML = newAddedBook[0].title;
+    event.preventDefault();
   }
