@@ -3,6 +3,12 @@ const button = document.querySelector(".newBook");
 const libraryDiv = document.querySelector(".library")
 let myLibrary = [];
 button.addEventListener('click', addBookToLibrary);
+let removeButton = document.createElement('button');
+removeButton.className = "removeButton";
+removeButton.textContent = "Remove Book"
+let readButton = document.createElement('button');
+readButton.className = "readButton";
+readButton.textContent = "Read / Not read";
 
 function book(title, author, pages, read) {
   // the constructor...
@@ -39,5 +45,8 @@ function addBookToDisplay() {
     let newAddedBook = myLibrary.slice(-1);
     console.log(newAddedBook[0].title);
     p.innerHTML = newAddedBook[0].title;
+    p.appendChild(removeButton);
+    p.appendChild(readButton);
+    p.dataset.title = newAddedBook[0].title;
     event.preventDefault();
   }

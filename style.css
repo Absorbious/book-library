@@ -28,3 +28,11 @@ button{
     border-radius: 10px;
     border: 1px solid rgb(201, 201, 201);
 }
+
+.removeButton{
+    background-color: rgb(250, 197, 197);
+    margin-left: 20px;
+}
+.readButton{
+    background-color: rgb(250, 238, 197);
+}
